@@ -28,6 +28,7 @@ spec:
       containers:
       - name: mysql
         image: mysql:8.0.24
+        # look at https://hub.docker.com/_/mysql for additional vars
         env:
           - name: MYSQL_DATABASE
             value: wordpress-db

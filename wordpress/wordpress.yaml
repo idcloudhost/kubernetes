@@ -28,6 +28,7 @@ spec:
       containers:
       - name: wordpress
         image: wordpress:php8.0-apache
+        # look at https://hub.docker.com/_/wordpress for additional vars
         env:
           - name: WORDPRESS_DB_HOST
             value: mysql
