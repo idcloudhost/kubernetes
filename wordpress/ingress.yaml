@@ -2,6 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wordpress
+  annotations:
+#   cert-manager.io/cluster-issuer: cloud-letsencrypt
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
   - host: blog.my-website.id
@@ -14,4 +17,7 @@ spec:
             name: wordpress
             port:
               number: 80
-  
+#  tls:
+#  - hosts:
+#    - blog.my-website.id
+#    secretName: blog-my-website-secret
